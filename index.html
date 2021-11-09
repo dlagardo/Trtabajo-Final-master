@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web desarrollado por Dario Alberto Lagardo para el curso de JavaScript de CoderHouse. Noviembre 2021.">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;900&display=swap" rel="stylesheet">
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+    <title>Dario Alberto Lagardo</title>
+</head>
+<body>
+    <nav>
+        <a class="logo" href="index.html">Tienda de Informatica</a>
+        <div class="cart">
+            <img src="./img/shopping-cart-solid.jpg" alt="">
+            <span class="cantidad noShow"></span>
+        </div>
+        <div class="cart__contenido">
+            <div class="wraper__titles">
+                <div class="imagen">Imagen</div>
+                <div class="nombre">Nombre</div>
+                <div class="negrita">Precio</div>
+                <div class="cantidad">Cantidad</div>
+                <div class="parcial">Valor Parcial</div>
+            </div>
+           <div class="wraper__content">Carrito vacio</div>
+           <div class="wraper__cta">
+               <div class="cta__buy">comprar</div>
+               <div class="cta__clear">borrar</div>
+              
+           </div>
+
+        </div>
+        <input type="checkbox" aria-hidden="true" class="input" tabindex='-1' >
+        <div class="burguer">
+            <div class="linea1"></div>    
+            <div class="linea2"></div>    
+            <div class="linea3"></div>    
+        </div> 
+        <div class="menu">
+            <div class="containerLinks">
+                <a href="index.html">inicio</a>
+                <a href="#servicios">servicios</a>
+                <p id="dolarizar">dolarizar precios</p>
+                
+            </div>
+        </div>
+        <div class="usuarios">
+            <img src="./img/users.png" alt="" id="logueo">
+            <div class="usuario" id="user"></div>
+            <div class="menuUser">
+                <span id="bienvenidaLogueado"></span>
+                <span class="cerrarSesion">Cerrar sesión</span>
+            </div>
+            <div id="containerLogueo">
+                <div class="logueo">
+                    <form>
+                        <div id="datosUsuario">
+                            <div>
+                                <label for="nombreLogueo">Nombre</label>
+                                <input type="text" id="nombreLogueo" placeholder="Nombre">
+                                <span class="error" id="errorNombre"></span>
+                            </div>
+                            <div>
+                                <label for="claveLogueo">Clave</label>
+                                <input type="password" id="claveLogueo" placeholder="Clave">
+                                <span class="error" id="errorClave"></span>
+                            </div>
+                            <div id ="repetirClave" class="noShow">
+                                <label for="claveLogueoRepetir">Repetir Clave</label>
+                                <input type="password" id="claveLogueoRepetir" placeholder="Repetir clave">
+                                <span class="error" id="errorRepetirClave"></span>
+                            </div>
+                        </div>
+                        <div class="botones">
+                            <p class="boton--logueo" type="submit">Ingresar</p>
+                            <p class="boton--registro" type="submit">Registrate</p>
+                            <p class="boton--confirmar" type="submit">Confirmar</p>
+                            <p class="boton--cancelar" type="submit">Cancelar</p>
+                        </div>
+                    </form>  
+                    <p class="infoLogueo">
+                    </p>              
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="info">
+            <div class="titleCta">
+                <h1>La mejor Publicidad es lo que hacen los clientes Satisfechos.</h1>
+                <div class="ctas">
+                    <div class="cta">contactanos</div>
+                    <div class="cta--secondary"> <a  href="#servicios">ver servicios</a> </div><span class="arrow--cta"> &#10230</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <p class="main--title mt4 align--center" id="servicios">Lo que ofrecemos:</p>
+        <section class="servicios" >
+        </section>
+    </main>
+    <div id="containerModalCompra">
+        <div class="modalCompra">
+            <div class="containerCirculoTilde">
+                <div class="circulo"></div>
+                <div class="tilde"></div>
+            </div>
+            <p class="compraExitosa">Compra realizada con exito!!</p>
+            <p id="cerrarCompraExitosa">cerrar</p>
+        </div>
+    </div>
+    <footer>
+        2021 - Servicios Informáticos - Dario Alberto Lagardo
+    </footer>
+    <div class="modal" id="modal"></div>
+    <div id="containerModalContacto">
+        <div class="modalContacto"></div>
+    </div>
+   
+    <script defer src="./js/objects.js"></script>
+    <script defer src="./js/dom.js"></script>
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/ajax.js"></script>
+</body>
+</html>

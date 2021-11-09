@@ -1,0 +1,81 @@
+@media only screen and (min-width: 55rem) {
+  header {
+    .info {
+      margin: 2rem auto;
+      .titleCta {
+        max-width: 50%;
+        text-align: left;
+        align-items: flex-start;
+        h2 {
+          margin-left: 0;
+          width: 80%;
+        }
+      }
+      img {
+        width: 50%;
+        max-width: 450px;
+        margin: 2rem 1rem 0 0;
+        display: block;
+      }
+    }
+  }
+  nav {
+    .logo {
+      order: 1;
+    }
+    .cart {
+      order: 5;
+      margin-right: 2rem;
+    }
+    .cart__contenido {
+      order: 6;
+      .wraper__titles {
+        .imagen,
+        .nombre,
+        .precio,
+        .cantidad,
+        .parcial,
+        .negrita {
+          width: 20%;
+        }
+      }
+    }
+    input {
+      order: 2;
+      display: none;
+    }
+    .burguer {
+      display: none;
+      order: 3;
+    }
+    .menu {
+      order: 4;
+      z-index: 2;
+      opacity: 1;
+      top: 0;
+      left: 0;
+      position: relative;
+      width: fit-content;
+      .containerLinks {
+        background-color: $initialViolet;
+        flex-direction: row;
+        a,
+        a:visited,
+        p {
+          color: #fff;
+          a:hover {
+            background: #695ae0;
+          }
+        }
+      }
+    }
+  }
+  main {
+    .soluciones {
+      .cuadros__soluciones {
+        width: 30%;
+        min-height: 100px;
+      }
+    }
+  }
+}
